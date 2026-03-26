@@ -1,7 +1,7 @@
 import telebot
 from telebot import types
 
-TOKEN = "8514556368:AAFVQieUv8qI-ykkjtU8CtbMVzLA5VVz3go"
+TOKEN = "5111"
 bot = telebot.TeleBot(TOKEN)
 
 
@@ -34,7 +34,7 @@ def handle_callback(call):
         bot.send_message(call.message.chat.id, " в разработке.")
 
     elif call.data == "orders":
-        bot.send_message(call.message.chat.id, " разработке.")
+        bot.send_message(call.message.chat.id, " в разработке.")
 
     elif call.data == "custom":
         markup = types.InlineKeyboardMarkup()
