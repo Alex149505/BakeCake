@@ -2,7 +2,7 @@ import telebot
 from keyboards import get_main_menu, get_tier_keyboard, get_shape_keyboard, get_topping_keyboard, get_berries_keyboard, get_decor_keyboard
 
 
-TOKEN = "8514556368:AAFVQieUv8qI-ykkjtU8CtbMVzLA5VVz3go"
+TOKEN = ""
 bot = telebot.TeleBot(TOKEN)
 
 user_data = {}
