@@ -1,7 +1,3 @@
-from db.db import get_or_create_user, load_data, save_data
-from keyboards.keyboards import profile_kb
-
-
 def register_profile_handlers(bot):
 
     @bot.message_handler(commands=["profile"])
