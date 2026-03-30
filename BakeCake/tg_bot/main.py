@@ -1,6 +1,6 @@
 import telebot
 from keyboards import get_main_menu
-from castom_cake import start_custom_cake, handle_custom_cake_callback
+from castom_cake import start_custom_cake, handle_custom_cake_callback, handle_custom_cake_text
 
 
 TOKEN = "8514556368:AAFVQieUv8qI-ykkjtU8CtbMVzLA5VVz3go"
@@ -35,6 +35,11 @@ def handle_callback(call):
 
     else:
         handle_custom_cake_callback(bot, call, user_data)
+
+
+@bot.message_handler(func=lambda message: True)
+def handle_text(message):
+    handle_custom_cake_text(bot, message, user_data)
 
 
 if __name__ == '__main__':

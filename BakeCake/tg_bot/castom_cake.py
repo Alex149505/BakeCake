@@ -62,17 +62,6 @@ def handle_custom_cake_callback(bot, call, user_data):
             reply_markup=get_berries_keyboard()
         )
 
-    elif call.data in ["strawberry", "blackberry", "raspberry", "dewberry", "berries_none"]:
-        if chat_id not in user_data:
-            user_data[chat_id] = {}
-
-        user_data[chat_id]["berries"] = call.data
-
-        bot.send_message(
-            chat_id,
-            "Выберите декор:",
-            reply_markup=get_decor_keyboard()
-        )
 
     elif call.data in ["strawberry", "blackberry", "raspberry", "dewberry", "berries_none"]:
         if chat_id not in user_data:
@@ -86,10 +75,41 @@ def handle_custom_cake_callback(bot, call, user_data):
             reply_markup=get_decor_keyboard()
         )
 
-    elif call.data in ["marzipan", "pecan", "huzlenut", "meringue", "pistachios", "without_decor"]:
+    elif call.data == "add_writing":
+        chat_id = call.message.chat.id
+
         if chat_id not in user_data:
             user_data[chat_id] = {}
 
-        user_data[chat_id]["decor"] = call.data
+        user_data[chat_id]["waiting_for_text"] = True
 
-        bot.send_message(chat_id, "Декор сохранён.")                        
+        bot.send_message(chat_id, "Введите надпись для торта:")
+
+
+
+def handle_custom_cake_text(message, bot):
+    chat_id = message.chat.id
+
+    if chat_id in user_data and user_data[chat_id].get("waiting_for_text"):
+        user_data[chat_id]["writing"] = message.text
+        user_data[chat_id]["waiting_for_text"] = False
+
+        bot.send_message(chat_id, f"Надпись добавлена: {message.text}")
+
+    show_order_summary(bot, chat_id, user_data)
+
+
+def show_order_summary(bot, chat_id, user_data):
+    order = user_data.get(chat_id, {})
+
+    summary = (
+        f"Ваш заказ:\n"
+        f"Уровни: {order.get('tier', 'не выбрано')}\n"
+        f"Форма: {order.get('shape', 'не выбрано')}\n"
+        f"Топпинг: {order.get('topping', 'не выбрано')}\n"
+        f"Ягоды: {order.get('berries', 'не выбрано')}\n"
+        f"Декор: {order.get('decor', 'не выбрано')}\n"
+        f"Надпись: {order.get('writing', 'нет')}"
+    )
+
+    bot.send_message(chat_id, summary)       
