@@ -1,0 +1,44 @@
+{
+    "users": {
+        "1939895149": {
+            "orders": [
+                {
+                    "cake": "Карамельный торт",
+                    "price": 1100,
+                    "status": "Новый"
+                },
+                {
+                    "cake": "Карамельный торт",
+                    "price": 1100,
+                    "status": "Новый"
+                },
+                {
+                    "cake": "Фруктовый торт",
+                    "price": 1500,
+                    "status": "Новый"
+                }
+            ]
+        }
+    },
+    "ready_cakes": [
+        {
+            "name": "Шоколадный торт",
+            "price": 1200,
+            "photo": "images/chocolate.jpg"
+        },
+        {
+            "name": "Фруктовый торт",
+            "price": 1500,
+            "photo": "images/fruit.jpg"
+        },
+        {
+            "name": "Карамельный торт",
+            "price": 1100,
+            "photo": "images/caramel.jpg"
+        }
+    ],
+    "promo_codes": {
+        "DISCOUNT10": 0.1,
+        "DISCOUNT20": 0.2
+    }
+}
