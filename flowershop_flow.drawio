@@ -1,0 +1,135 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36">
+  <diagram id="flowershop-flow" name="Page-1">
+    <mxGraphModel dx="1147" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" value="Старт бота" vertex="1">
+          <mxGeometry height="120" width="220" x="430" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="consent" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Согласие на обработку данных" vertex="1">
+          <mxGeometry height="80" width="240" x="420" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog_btn" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Посмотреть весь каталог" vertex="1">
+          <mxGeometry height="70" width="210" x="90" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Листинг букетов" vertex="1">
+          <mxGeometry height="70" width="190" x="100" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="pick_btn" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" value="Подобрать букет" vertex="1">
+          <mxGeometry height="70" width="220" x="430" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="no_consult" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Мне не нужна консультация" vertex="1">
+          <mxGeometry height="70" width="250" x="780" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="occasion" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="выбор повода&lt;div&gt;день рождения, свадьба, в школу, без повода, “другой повод” с подменю, где бот просит написать “какой повод”.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="450" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="budget" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Примерная стоимость&lt;div&gt;- 500. -1000. -2000&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="450" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="bouquet_card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Карточка подобранного букета&lt;div&gt;(описание букета , состав, стоимость )&lt;/div&gt;&lt;div&gt;кнопки:&lt;/div&gt;&lt;div&gt;- оформить заказ&lt;/div&gt;&lt;div&gt;-добавить букет&lt;/div&gt;&lt;div&gt;-нужна консультация&amp;nbsp;&lt;/div&gt;&lt;div&gt;-вернуться в меню&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="350" x="365" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="order_form" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=12;verticalAlign=top;" value="Оформление заказа&#xa;&#xa;• ФИ&#xa;• Адрес доставки&#xa;• Дата&#xa;• Время&#xa;• Номер телефона&#xa;• Промокод (фича)" vertex="1">
+          <mxGeometry height="240" width="260" x="110" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="payment" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="подтверждение заказа&lt;div&gt;(показ всех данных для проверки)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="180" x="495" y="1045" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="consent" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="consent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="start" value="нет">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="780" y="260" />
+              <mxPoint x="780" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="consent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="pick_btn" value="да">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="consent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="catalog_btn" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="consent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="no_consult" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="905" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="catalog_btn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="catalog" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="pick_btn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="occasion" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="occasion" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="budget" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="budget" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="bouquet_card" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="bouquet_card" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="order_form" value="Оформить заказ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="bouquet_card" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;entryX=0.057;entryY=0.971;entryDx=0;entryDy=0;entryPerimeter=0;" target="no_consult" value="Нужна консультация">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="order_form" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="payment" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uD1-SUkmee1mBD_dGtCG-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="выбор способа оплаты( фича)" vertex="1">
+          <mxGeometry height="60" width="120" x="510" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="uD1-SUkmee1mBD_dGtCG-3" edge="1" parent="1" source="payment" style="endArrow=classic;html=1;rounded=0;exitX=0.359;exitY=0.985;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.414;entryY=0.044;entryDx=0;entryDy=0;entryPerimeter=0;" target="uD1-SUkmee1mBD_dGtCG-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="570" y="1250" as="sourcePoint" />
+            <mxPoint x="620" y="1200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uD1-SUkmee1mBD_dGtCG-6" edge="1" parent="1" source="payment" style="endArrow=classic;html=1;rounded=0;exitX=0.359;exitY=0.039;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="1000" />
+            </Array>
+            <mxPoint x="600" y="1000" as="sourcePoint" />
+            <mxPoint x="360" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uD1-SUkmee1mBD_dGtCG-7" connectable="0" parent="uD1-SUkmee1mBD_dGtCG-6" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="исправить данные" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uD1-SUkmee1mBD_dGtCG-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="заказ оформлен!&lt;div&gt;Спасибо за заказ! мы с Вами сяжемся&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="510" y="1370" as="geometry" />
+        </mxCell>
+        <mxCell id="uD1-SUkmee1mBD_dGtCG-10" edge="1" parent="1" source="uD1-SUkmee1mBD_dGtCG-1" style="endArrow=classic;html=1;rounded=0;exitX=0.414;exitY=1.044;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="510" y="1320" as="sourcePoint" />
+            <mxPoint x="560" y="1380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uD1-SUkmee1mBD_dGtCG-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="пользователь получает&amp;nbsp; все данные о заказе:&lt;div&gt;- информацию о получателе&amp;nbsp;&lt;/div&gt;&lt;div&gt;- способ и время доставки&amp;nbsp;&lt;/div&gt;&lt;div&gt;- состав заказа&amp;nbsp;&lt;/div&gt;&lt;div&gt;- стоимость заказа&lt;/div&gt;&lt;div&gt;- способ оплаты&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;- комментарий&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="220" x="850" y="1165" as="geometry" />
+        </mxCell>
+        <mxCell id="uD1-SUkmee1mBD_dGtCG-12" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.014;entryY=0.449;entryDx=0;entryDy=0;entryPerimeter=0;" target="uD1-SUkmee1mBD_dGtCG-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="630" y="1241" as="sourcePoint" />
+            <mxPoint x="850" y="1230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
